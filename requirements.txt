@@ -1,0 +1,4 @@
+requests~=2.23.0
+PyAutoGUI~=0.9.52
+opencv-python~=4.2.0.32
+numpy~=1.18.5
