@@ -1,0 +1,86 @@
+{
+    "END_TOP_LEFT": [
+        31,
+        118
+    ],
+    "END_BOTTOM_RIGHT": [
+        433,
+        524
+    ],
+    "User": "599425708",
+
+
+    "Syuhun_isstart_path": "./img/yhtzsimple.png",
+    "Tyuhun_isstart_path": "./img/team2.png",
+    "Syuhun_end_path": "./img/jieshuluxiang.png",
+    "Syuhun_end2_path": "./img/yuling_end.png",
+    "Tyuhun_end_path": "./img/shengli.png",
+    "Tyuhun_tcg_path": "./img/tanchigui.png",
+    "Tyuhun_end2_path": "./img/yuling_end.png",
+    "Syuhun_wait_time": 30,
+    "Tyuhun_wait_time": 26,
+    "Syuhun_defate_path": "./img/defate.png",
+    "Tyuhun_defate_path": "./img/defate.png",
+    "Syuhun_teamwait_path": "./img/lackperson.png",
+    "Tyuhun_teamwait_path": "./img/lackperson.png",
+    "yuhun_biaoji": [
+        [
+            180,
+            417
+        ],
+        [
+            346,
+            441
+        ],
+        [
+            538,
+            433
+        ],
+        [
+            736,
+            451
+        ],
+        [
+            936,
+            426
+        ]
+    ],
+
+    "yeyuanhuo_isstart_path": "./img/yyh_start.png",
+    "yeyuanhuo_end_path": "./img/yeshengli.png",
+    "yeyuanhuo_end2_path": "./img/yyh_end.png",
+    "yeyuanhuo_defate_path": "./img/defate.png",
+    "yeyuanhuo_wait_time": 50,
+    "yeyuanhuo_biaoji": [[144,412], [359,395], [533, 420], [725, 437], [939,441]],
+
+
+    "Sjuexing_isstart_path": "./img/Sjuexing.png",
+    "Sjuexing_end_path": "./img/juexingshengli.png",
+    "Sjuexing_end2_path": "./img/juexing_end.png",
+    "Sjuexing_wait_time": 9,
+    "Tjuexing_isstart_path": "./img/team.png",
+    "Tjuexing_end_path": "./img/juexingshengli.png",
+    "Tjuexing_end2_path": "./img/juexing_end.png",
+    "Tjuexing_wait_time": 4,
+    "Sjuexing_teamwait_path": "0",
+    "Tjuexing_teamwait_path": "./img/lackperson.png",
+    "Sjuexing_defate_path": "./img/defate.png",
+    "Tjuexing_defate_path": "./img/defate.png",
+    "juexing_biaoji": [],
+
+
+    "yuling_isstart_path": "./img/yuling_start.png",
+    "yuling_end_path": "./img/yuling_end.png",
+    "yuling_end2_path": "./img/yuling_end.png",
+    "yuling_defate_path": "./img/defate.png",
+    "yuling_wait_time": 20,
+    "yuling_start_pos": [
+        1033,
+        595
+    ],
+    "yuling_biaoji": [[252, 363], [317, 491], [553, 428], [771, 483], [854, 414]],
+
+    "TianMo_isstart_path": "./img/tm_start.png",
+    "TianMo_end_path": "./img/tm_end.png",
+    "TianMo_wait_time": 7
+}
