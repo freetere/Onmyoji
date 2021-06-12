@@ -6,7 +6,6 @@
 
 """
 import win32gui, win32ui, win32con
-from ctypes import windll
 from numpy import where
 import logging
 import pyautogui
