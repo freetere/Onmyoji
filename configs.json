@@ -7,7 +7,7 @@
         433,
         524
     ],
-    "User": "599425708",
+    "User": "",
 
 
     "Syuhun_isstart_path": "./img/yhtzsimple.png",
@@ -78,9 +78,6 @@
         1033,
         595
     ],
-    "yuling_biaoji": [[252, 363], [317, 491], [553, 428], [771, 483], [854, 414]],
+    "yuling_biaoji": [[252, 363], [317, 491], [553, 428], [771, 483], [854, 414]]
 
-    "TianMo_isstart_path": "./img/tm_start.png",
-    "TianMo_end_path": "./img/tm_end.png",
-    "TianMo_wait_time": 7
 }
