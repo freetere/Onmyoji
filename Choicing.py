@@ -13,15 +13,6 @@ from Onmyoji.Fight import fight
 
 pyautogui.FAILSAFE = True
 def Run():
-    root = """
-    *******************************
-    1   御魂
-    2   御灵
-    3   觉醒
-    4   业原火
-    5   狗粮(coding)
-    请输入你的选项：\n
-    """
     user = """
     1   御魂
     2   御灵
@@ -37,7 +28,7 @@ def Run():
     御灵模式
     """
     try:
-        M1 = eval(input(eval(init.information['mode'])))
+        M1 = eval(input(eval(user)))
         if int(M1) == 1:
             M2 = eval(input(yuhunMeul))
             counts = eval(input("请输入预计挑战次数（0为一直挑战）\n"))
@@ -84,4 +75,5 @@ def Run():
         print(traceback.format_exc())
         input(f"{time.strftime('%Y %b %d %H:%M:%S')}  Choicing  请将此错误信息发给开发者(yl2)")
 
-Run()
+if __name__ == '__main__':
+    Run()
