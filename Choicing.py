@@ -8,14 +8,11 @@
 
 import traceback
 from threading import Thread
-from Onmyoji.fakefile import Very
 from Onmyoji.functions import *
 from Onmyoji.Fight import fight
 
 pyautogui.FAILSAFE = True
 def Run():
-    init = Very()
-    init.envery()
     root = """
     *******************************
     1   御魂

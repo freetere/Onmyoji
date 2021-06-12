@@ -1,6 +1,5 @@
-./idea
-/test.py
-/debug/
+/TianMo.py
 /build/
 /dist/
-/*.spec
+/__pycache__/
+/debug/
