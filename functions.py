@@ -93,6 +93,8 @@ def imgDeal(img):
         reheight = int(hd* imginfo[0])
         new_img = cv2.resize(img, (rewidth, reheight))
         return new_img
+
+# TODO need update
 def bigOrSmall():
     W = 1152
     H = 679

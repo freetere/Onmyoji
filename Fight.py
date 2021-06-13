@@ -314,7 +314,7 @@ class fight:
 
                     elif choice == choices[1] and position != None:
                         # yuhun.click_point(position, factor=50)
-                        self.end2()
+                        self.end2(self._hwnd)
                         self.sleep_time(0.8)
 
                     elif choice == choices[2] and position != None:
