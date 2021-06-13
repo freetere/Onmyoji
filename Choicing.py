@@ -11,9 +11,10 @@ from threading import Thread
 from Onmyoji.functions import *
 from Onmyoji.Fight import fight
 
+
 pyautogui.FAILSAFE = True
 def Run():
-    user = """
+    user ="""
     1   御魂
     2   御灵
     请输入你的选项：\n
@@ -74,6 +75,7 @@ def Run():
         # print(Exception)
         print(traceback.format_exc())
         input(f"{time.strftime('%Y %b %d %H:%M:%S')}  Choicing  请将此错误信息发给开发者(yl2)")
+
 
 if __name__ == '__main__':
     Run()
