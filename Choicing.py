@@ -29,7 +29,7 @@ def Run():
     御灵模式
     """
     try:
-        M1 = eval(input(eval(user)))
+        M1 = eval(input(user))
         if int(M1) == 1:
             M2 = eval(input(yuhunMeul))
             counts = eval(input("请输入预计挑战次数（0为一直挑战）\n"))
