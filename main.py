@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 """
 @author: 古时月
-@file: Choicing.py
+@file: main.py
 @time: 2021/5/8 14:41
 
 """

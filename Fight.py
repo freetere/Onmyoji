@@ -44,7 +44,7 @@ class fight:
         time.sleep(CheatTime(times))
 
     def sleep_time2(self):
-        time.sleep(CheatTime(self.configs[self._name + "_wait_time"] - 5.5))
+        time.sleep(CheatTime(self.configs[self._name + "_wait_time"] - 6.5))
 
     def sleep_time3(self):
         time.sleep(CheatTime(self.configs[self._name + "_wait_time"]))
@@ -227,7 +227,7 @@ class fight:
                         logging.info("match success,start challenge!")
                         self.click_point(position, self._hwnd)
                         if self.loc != 0:
-                            self.sleep_time(6)
+                            self.sleep_time(7)
                             self.focus()
                             self.sleep_time2()
                         else:
@@ -283,7 +283,7 @@ class fight:
                 if self._num >= self.count & self.count != 0:
                     break
         except pyautogui.FailSafeException:
-            pass
+            print(f"{time.strftime('%Y %b %d %H:%M:%S')}     pyautogui error!")
 
         except Exception:
 
