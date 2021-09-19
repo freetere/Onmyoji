@@ -8,7 +8,7 @@ cv2 + pyautogui
 
 #### 安装教程
 
-1.  以管理员的权限运行Choicing.py
+1.  以管理员的权限运行main.py
 2.  若上述方法失败，可用pyinstaller打包，并以管理员的身份运行
 3.  xxxx
 
