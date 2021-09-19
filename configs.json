@@ -78,6 +78,16 @@
         1033,
         595
     ],
-    "yuling_biaoji": [[252, 363], [317, 491], [553, 428], [771, 483], [854, 414]]
+    "yuling_biaoji": [[252, 363], [317, 491], [553, 428], [771, 483], [854, 414]],
+
+
+    "climbTower_isstart_path": "./img/climbTower/start.png",
+    "climbTower_end_path": "./img/climbTower/end.png",
+    "climbTower_con1_path": "./img/climbTower/con1.png",
+    "climbTower_con2_path": "./img/climbTower/con2.png",
+    "climbTower_defeat_path": "./img/climbTower/defate.png",
+    "climbTower_restart_path": "./img/climbTower/start0.png",
+    "climbTower_Wait_time": 30,
+    "climbTower_biaoji": [[],[400, 377], [], [], []]
 
 }

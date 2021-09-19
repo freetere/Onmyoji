@@ -4,3 +4,12 @@
 /__pycache__/
 /debug/
 /*.spec
+/tools
+/nimg/*.bmp
+.idea/.gitignore
+.idea/Onmyoji.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+img/climbTower/

@@ -7,7 +7,7 @@
 """
 
 import traceback
-from threading import Thread
+# from threading import Thread
 from Onmyoji.functions import *
 from Onmyoji.Fight import fight
 
@@ -17,6 +17,7 @@ def Run():
     user ="""
     1   御魂
     2   御灵
+    3   ClimbTower
     请输入你的选项：\n
     """
     yuhunMeul = """
@@ -24,10 +25,12 @@ def Run():
     2   组队模式(司机）
     3   组队模式(打手)
     5   魂土双开
+    请输入你的选项：\n
     """
     yulingMeul="""
     御灵模式
     """
+
     try:
         M1 = eval(input(user))
         if int(M1) == 1:
@@ -45,17 +48,18 @@ def Run():
                 fight1.setPassenger(loc=loc, count=counts)
                 fight1.passengerRun()
             elif int(M2) == 4:
-                fight1.setDoublt(loc=loc, count=counts)
-                logging.info("司机就位！")
-                fight2 = fight()
-                fight2.setPassenger(hwnd=fight1.hwnd2, count=counts)
-                logging.info('打手就位！')
-                task1 = Thread(target=fight1.DriverRun)
-                task2 = Thread(target=fight2.passengerRun)
-                task1.start()
-                task2.start()
-                task1.join()
-                task2.join()
+                pass
+                # fight1.setDoublt(loc=loc, count=counts)
+                # logging.info("司机就位！")
+                # fight2 = fight()
+                # fight2.setPassenger(hwnd=fight1.hwnd2, count=counts)
+                # logging.info('打手就位！')
+                # task1 = Thread(target=fight1.DriverRun)
+                # task2 = Thread(target=fight2.passengerRun)
+                # task1.start()
+                # task2.start()
+                # task1.join()
+                # task2.join()
             elif int(M2) == 5:
                 fight1.setDoublt2(loc=loc, count=counts)
                 fight1.DoubleRun()
@@ -64,12 +68,19 @@ def Run():
 
         elif int(M1) == 2:
             counts = eval(input("请输入预计挑战次数（0为一直挑战）\n"))
-            loc = int(input("输入标记式神位置（从左至右为1-5），若不标记为0(标记暂时失效，请输入0)\n"))
+            loc = int(input("输入标记式神位置（从左至右为1-5），若不标记为0(部分电脑标记暂时失效，请自行尝试)\n孔雀三号位可用，其他自行尝试\n"))
             fight1 = fight()
             fight1.setYuling(loc=loc, count=counts)
             fight1.YulingRun()
+        elif int(M1) == 3:
+            counts = eval(input("请输入预计挑战次数（0为一直挑战）\n"))
+            loc = int(input("输入标记式神位置（从左至右为1-5)\n"))
+            fight1 = fight()
+            fight1.setClimbTower(loc=loc, count=counts)
+            fight1.climbTowerRun()
         else:
             input("输入有误，请重启程序。")
+
 
     except Exception:
         # print(Exception)

@@ -236,6 +236,17 @@ def fious(configs, loc, hwnd):
         logging.info(f"标记式神{loc}成功")
     else:
         logging.info("无标记式神")
+
+def climbTower_fious(configs, loc, hwnd):
+    if loc in [1, 2, 3, 4, 5]:
+        tf = location(hwnd)
+        fac = bigOrSmall()
+        position = [int(k*v)+t for k,v,t in zip(configs["climbTower_biaoji"][loc-1], fac, tf)]
+        pyautogui.click(position, button="left")
+        logging.info(f"标记式神{loc}成功")
+    else:
+        logging.info("无标记式神")
+
 def yuling_fious(configs, loc, hwnd):
     if loc in [1, 2, 3, 4, 5]:
         tf = location(hwnd)

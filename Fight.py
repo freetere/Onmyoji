@@ -17,12 +17,12 @@ class fight:
         self._name = ""
         self._hwnd = 0
         self.hwnd2 = 0
+        self.hwnds= []
         self.configs = load_json("configs.json")
         self.loc = 0
         self.count = 10000
         self._num = 0
         self.person = 1
-        pass
 
     def pos_flag(self, choice, hwnd, nimg):
         jietu(hwnd, nimg)
@@ -65,6 +65,9 @@ class fight:
 
     def yl_focus(self):
         yuling_fious(self.configs, self.loc, self._hwnd)
+
+    def cT_focus(self):
+        climbTower_fious(self.configs, self.loc, self._hwnd)
 
     def DriverRun(self):
         try:
@@ -363,7 +366,7 @@ class fight:
                         logging.info("challenge success!")
                         logging.info(f"~~~~~~~~~~~~~~~ {self._num} ~~~~~~~~~~~~~~~")
                         self.click_point(position, self._hwnd, factor=50)
-                        self.sleep_time(2.5)
+                        self.sleep_time(2)
                     elif choice == choices[2] and position != None:
                         pass
                     elif choice == choices[3] and position != None:
@@ -383,40 +386,67 @@ class fight:
 
             input(f"{time.strftime('%Y %b %d %H:%M:%S')}  Driver  请将此错误信息发给开发者(yl2)")
 
-    def TianMoRun(self):
+    def climbTowerRun(self):
+        flag1 =True
+        choices = [self._name + "_isstart", self._name + "_end"]
+        choices2 = [self._name + "_con1", self._name + "_defeat"]
         try:
             while True:
-                choices = [self._name + "_isstart", self._name + "_end",]
                 for choice in choices:
-                    position = self.pos_flag(choice, self._hwnd)
+                    position = self.pos_flag(choice, self._hwnd, "./nimg/nimg.bmp")
 
-                    if choice == choices[0] and position != None:
+                    if choice == choices[0] and position != None and flag1:
+                        self._num += 1
                         logging.info("match success,start challenge!")
-                        self.click_point(position)
-                        flag =True
-                        self.sleep_time3()
+                        self.click_point(position, self._hwnd)
+                        if self.loc != 0:
+                            self.sleep_time(6.7)
+                            self.cT_focus()
+                            self.sleep_time2()
+                        else:
+                            self.sleep_time3()
+                        flag = True
+                        flag1 = False
 
                     elif choice == choices[1] and position != None:
                         if flag:
-                            self._num += 1
                             logging.info("challenge success!")
                             logging.info(f"~~~~~~~~~~~~~~~ {self._num} ~~~~~~~~~~~~~~~")
                             flag = False
-                        self.click_point(position, factor=70)
-                        self.sleep_time(0.5)
-                        # yuhun.click_point(position,factor=70)
+                        self.end2(self._hwnd)
+                        flag1 = True
+                        self.sleep_time(4.8)
+                        for x in choices2:
+                            position = self.pos_flag(x, self._hwnd, "./nimg/nimg.bmp")
+                            if position != None and x== choices2[0]:
+                                self.click_point(position, self._hwnd,factor=70)
+                                logging.info("Next Cell")
+                                self.sleep_time(3)
+                                self.click_point((609, 211), self._hwnd, factor=20)
+                                self.sleep_time(3)
+                            elif position != None and x== choices2[1]:
+                                self.click_point(position, self._hwnd, factor=70)
+                                logging.info("Next Cell Defeat")
+                                self.sleep_time(3)
+                                self.click_point((609, 211), self._hwnd, factor=20)
+                                self.sleep_time(5)
+                                self.click_point((609, 311), self._hwnd, factor=20)
+
+
                     else:
-                        self.sleep_time(0.8)
+                        self.sleep_time(1)
 
                 if self._num >= self.count & self.count != 0:
                     break
 
-        except Exception as e:
-            print(e)
-            input(f"{time.strftime('%Y %b %d %H:%M:%S')}  TianMo  请将此错误信息发给开发者(yl2)")
+        except Exception:
+            # print(Exception)
+            print(traceback.format_exc())
+            input(f"{time.strftime('%Y %b %d %H:%M:%S')}  Driver  请将此错误信息发给开发者(yl2)")
 
-    def setTianMo(self,hwnd='', loc=0, count=100000):
-        self._name = "TianMo"
+
+    def setClimbTower(self,hwnd='', loc=0, count=100000):
+        self._name = "climbTower"
         if hwnd == "":
             hwnd = find_window_by_title("阴阳师-网易游戏")
         self._hwnd = hwnd
