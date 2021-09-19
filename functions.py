@@ -217,7 +217,7 @@ def load_json(config):
             logging.error("config读取失败，请检查配置。")
             return -1
     else:
-        logging.warning("请联系QQ599425708获取")
+        logging.warning("config文件缺失")
         time.sleep(10)
 
 
