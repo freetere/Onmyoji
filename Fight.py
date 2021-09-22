@@ -395,6 +395,7 @@ class fight:
 
                     if choice == choices[0] and position != None:
                         # self._num += 1
+                        startTime = time.time()
                         logging.info("match success,start challenge!")
                         self.click_point(position, self._hwnd)
                         self.sleep_time3()
@@ -403,6 +404,8 @@ class fight:
                     elif choice == choices[1] and position != None:
                         if flag:
                             self._num += 1
+                            endTime = time.time()
+                            logging.info(f"本次耗时{round(endTime-startTime,2)}")
                             logging.info("challenge success!")
                             logging.info(f"~~~~~~~~~~~~~~~ {self._num} ~~~~~~~~~~~~~~~")
                             flag = False
