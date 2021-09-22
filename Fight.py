@@ -8,7 +8,7 @@
 import win32com.client
 import traceback
 import pyautogui
-from Onmyoji.functions import *
+from functions import *
 
 
 pyautogui.FAILSAFE = True
@@ -387,55 +387,29 @@ class fight:
             input(f"{time.strftime('%Y %b %d %H:%M:%S')}  Driver  请将此错误信息发给开发者(yl2)")
 
     def climbTowerRun(self):
-        flag1 =True
         choices = [self._name + "_isstart", self._name + "_end"]
-        choices2 = [self._name + "_con1", self._name + "_defeat"]
         try:
             while True:
                 for choice in choices:
                     position = self.pos_flag(choice, self._hwnd, "./nimg/nimg.bmp")
 
-                    if choice == choices[0] and position != None and flag1:
-                        self._num += 1
+                    if choice == choices[0] and position != None:
+                        # self._num += 1
                         logging.info("match success,start challenge!")
                         self.click_point(position, self._hwnd)
-                        if self.loc != 0:
-                            self.sleep_time(6.7)
-                            self.cT_focus()
-                            self.sleep_time2()
-                        else:
-                            self.sleep_time3()
+                        self.sleep_time3()
                         flag = True
-                        flag1 = False
 
                     elif choice == choices[1] and position != None:
                         if flag:
+                            self._num += 1
                             logging.info("challenge success!")
                             logging.info(f"~~~~~~~~~~~~~~~ {self._num} ~~~~~~~~~~~~~~~")
                             flag = False
                         self.end2(self._hwnd)
-                        flag1 = True
-                        self.sleep_time(4.8)
-                        for x in choices2:
-                            position = self.pos_flag(x, self._hwnd, "./nimg/nimg.bmp")
-                            if position != None and x== choices2[0]:
-                                self.click_point(position, self._hwnd,factor=70)
-                                logging.info("Next Cell")
-                                self.sleep_time(3)
-                                self.click_point((609, 211), self._hwnd, factor=20)
-                                self.sleep_time(3)
-                            elif position != None and x== choices2[1]:
-                                self.click_point(position, self._hwnd, factor=70)
-                                logging.info("Next Cell Defeat")
-                                self.sleep_time(3)
-                                self.click_point((609, 211), self._hwnd, factor=20)
-                                self.sleep_time(5)
-                                self.click_point((609, 311), self._hwnd, factor=20)
-
-
+                        self.sleep_time(2)
                     else:
                         self.sleep_time(1)
-
                 if self._num >= self.count & self.count != 0:
                     break
 

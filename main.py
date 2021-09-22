@@ -8,8 +8,8 @@
 
 import traceback
 # from threading import Thread
-from Onmyoji.functions import *
-from Onmyoji.Fight import fight
+from functions import *
+from Fight import fight
 
 
 pyautogui.FAILSAFE = True
@@ -17,7 +17,7 @@ def Run():
     user ="""
     1   御魂
     2   御灵
-    3   ClimbTower
+    3   五周年庆典
     请输入你的选项：\n
     """
     yuhunMeul = """
@@ -74,9 +74,9 @@ def Run():
             fight1.YulingRun()
         elif int(M1) == 3:
             counts = eval(input("请输入预计挑战次数（0为一直挑战）\n"))
-            loc = int(input("输入标记式神位置（从左至右为1-5)\n"))
+            # loc = int(input("输入标记式神位置（从左至右为1-5)\n"))
             fight1 = fight()
-            fight1.setClimbTower(loc=loc, count=counts)
+            fight1.setClimbTower(loc=0, count=counts)
             fight1.climbTowerRun()
         else:
             input("输入有误，请重启程序。")
