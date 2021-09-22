@@ -83,6 +83,6 @@
 
     "climbTower_isstart_path": "./img/climbTower/start.png",
     "climbTower_end_path": "./img/climbTower/end.png",
-    "climbTower_Wait_time": 10
+    "climbTower_wait_time": 10
 
 }
