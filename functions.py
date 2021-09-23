@@ -165,8 +165,8 @@ def CheatPos(originPos, factor=6):
 
 def CheatTime(originTime, factor=300):
     """
-    对原始点击坐标进行随机偏移，防止封号
-    :param originPos:原始坐标
+    对原始时间进行随机偏移，防止封号
+    :param originPos:原始时间
     :return:
     """
     times = (random.randint(-factor, factor))/1000
